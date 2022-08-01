@@ -12,4 +12,12 @@
 <body > 
   <iframe src="https://script.google.com/macros/s/AKfycbw764g3WF76NBzjKKCuRvoneiSMFV8Al3T11TAkJBHGFZ1d18l3/exec" width="100%" height="100%" style="border:none;"></iframe>
 </body>
+<script>
+    
+    if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('/sw.js')
+    .then(() => { console.log('Service Worker Registered'); });
+}
+    </script>
 </html>
