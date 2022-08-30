@@ -7,7 +7,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>_hudai</title>
   </head>
   <style>
 
@@ -131,6 +132,12 @@ circle:nth-of-type(4) {
   document.getElementById("frame").style.display = "block";
  
   }
+    
+      if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('/sw.js')
+    .then(() => { console.log('Service Worker Registered'); });
+}
   </script>
 </html>
 
